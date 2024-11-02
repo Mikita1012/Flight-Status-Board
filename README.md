@@ -1,8 +1,5 @@
-# Getting Started with Create React App
+This project is bulit on React-Typescript. This application mainly shows the real-time data of flights along with the details. Details of each flight can be seen by clicking on the row where the name is displayed. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
@@ -11,8 +8,6 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm test`
 
