@@ -21,7 +21,8 @@ function App() {
       }
     };
     fetchFlights();
-
+    const interval = setInterval(fetchFlights, 5000);
+    return () => clearInterval(interval) // for cleanup when component is unmounted
 
   }, [])
   return (
