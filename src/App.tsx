@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import { FlightData } from './types/FlightData';
 import Flights from './components/Flights';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 
@@ -22,7 +24,7 @@ function App() {
       }
     };
     fetchFlights();
-    const interval = setInterval(fetchFlights, 5000);
+    const interval = setInterval(fetchFlights, 10000);
     return () => clearInterval(interval) // for cleanup when component is unmounted
 
   }, [])
@@ -41,7 +43,8 @@ function App() {
   return (
 
     <>
-      <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Flight Board ✈️</h1>
+    <Header />
+      {/* <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Flight Board ✈️</h1> */}
       {error ? (
         <p>{error}</p>
       ) : flightData.length > 0 ? (
@@ -49,6 +52,8 @@ function App() {
       ) : (
         <p>Loading...</p>
       )}
+
+      <Footer />
     </>
 
 

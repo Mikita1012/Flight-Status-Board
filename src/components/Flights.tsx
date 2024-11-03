@@ -19,7 +19,7 @@ const Flights: React.FC<FlightDataProps> = ({ flightData }) => {
         <>
             <div className="container">
                 {/* <h2>Flight Status</h2> */}
-                <Table className="table table-striped responsive">
+                <Table className="table table-primary table-striped table-hover responsive">
                     <thead>
                         <tr>
                             <th>Flight Number</th>

@@ -29,28 +29,28 @@ const FlightDetails: React.FC = () => {
         navigate(`/`);
     }
 
-return (
-    <div>
-        {
-            error ? (
-                <p>{error}</p>
-            ) : flightData ? (
-                <Card body style={{textAlign: 'center'}}>
-                    <h2>Flight Number: {flightData.flightNumber}</h2>
-                    <p>Airline: {flightData.airline}</p>
-                    <p>Origin: {flightData.origin}</p>
-                    <p>Destination: {flightData.destination}</p>
-                    <p>Departure Tine: {new Date(flightData.departureTime).toLocaleString()}</p>
-                    <p>Status: {flightData.status}</p>
-                    <button onClick={onTablePage} className='btn btn-primary'>Back to Results</button>
+    return (
+        <div style={{ maxWidth: '600px', margin: 'auto', padding: '20px' }}>
+            {
+                error ? (
+                    <p style={{color: 'red', textAlign: 'center'}}>{error}</p>
+                ) : flightData ? (
+                    <Card body className='text-center shadow-lg p-4 m-5 bg-white rounded' style={{ textAlign: 'center' }}>
+                        <h2 style={{color: '#007bff', fontWeight: 'bold'}}>Flight Number: {flightData.flightNumber}</h2> <hr/>
+                        <p><strong>Airline:</strong> {flightData.airline}</p>
+                        <p><strong>Origin:</strong> {flightData.origin}</p>
+                        <p><strong>Destination:</strong> {flightData.destination}</p>
+                        <p><strong>Departure Time:</strong>{new Date(flightData.departureTime).toLocaleString()}</p>
+                        <p><strong>Status:</strong> {flightData.status}</p>
+                        <Button onClick={onTablePage} className='btn btn-primary'>Back to Results</Button>
 
-                </Card >
-            ) : (
-                <p>Loading...</p>
-            )
-        }
-    </div>
-)
+                    </Card >
+                ) : (
+                    <p>Loading...</p>
+                )
+            }
+        </div>
+    )
 }
 
 
